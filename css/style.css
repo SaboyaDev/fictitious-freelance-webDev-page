@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap');
+
+:root {
+	--mainFont: 'Krub', sans-serif;
+
+	/* Colors */
+	--white: #fff;
+	--primary: #ffc107;
+	--secondary: #0097a7;
+	--gray: #757575;
+	--dark: #212121;
+}
+
+/* Box Sizing Reset */
+html {
+	box-sizing: border-box;
+	min-height: 100%;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	min-height: 100%;
+	font-family: var(--mainFont);
+	background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+/* Re-Usable Components*/
+.button {
+	padding: 0.5rem 2rem;
+	border-radius: 5px;
+	margin-top: 0.5rem;
+	display: inline-block;
+	font-weight: 700;
+	font-size: 1.1rem;
+	border: none;
+	text-transform: uppercase;
+	color: var(--white);
+	background-color: var(--secondary);
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.button:hover {
+	background-color: rgb(1, 123, 136);
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	margin: 1rem auto 3rem auto;
+	max-width: 1200px;
+	padding: 2rem;
+	border-radius: 1rem;
+	-webkit-box-shadow: 0px 4px 12px -1px rgba(0, 0, 0, 0.45);
+	-moz-box-shadow: 0px 4px 12px -1px rgba(0, 0, 0, 0.45);
+	box-shadow: 0px 4px 12px -1px rgba(0, 0, 0, 0.45);
+	background-color: var(--white);
+}
+/* ----------------------------------- */
+
+.main-navigation {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 1rem 0;
+	background-color: var(--white);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media (min-width: 768px) {
+	.main-navigation {
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 1rem 2rem;
+	}
+}
+
+.main-navigation a {
+	color: var(--dark);
+	font-size: 1.4rem;
+	margin-bottom: 1.4rem;
+}
+
+@media (min-width: 768px) {
+	.main-navigation a {
+		margin-bottom: 0;
+	}
+}
+
+.hero {
+	height: 28.125rem;
+	background-image: url(../img/hero.jpg);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.hero::after {
+	content: '';
+	background-color: rgba(0, 0, 0, 0.7);
+	display: block;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+}
+
+.hero-content {
+	position: relative;
+	text-align: center;
+	z-index: 10;
+	padding: 0 2rem;
+	color: var(--white);
+}
+
+.hero-content i {
+	color: var(--primary);
+	font-size: 2rem;
+	margin-right: 0.5rem;
+}
+
+h2,
+h3 {
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+	.services-container {
+		display: flex;
+		justify-content: space-between;
+	}
+	.service {
+		/* text-align: center; */
+		padding: 2rem;
+	}
+}
+
+.service {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.service h3 {
+	color: var(--secondary);
+	/* font-weight: 400; */
+	font-size: 1.1rem;
+}
+
+.service p {
+	line-height: 2;
+	text-align: center;
+}
+
+.icons {
+	background-color: var(--primary);
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 0.2rem;
+	border-radius: 50%;
+	height: 60px;
+	width: 60px;
+}
+
+.icons i {
+	font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+	.icons {
+		height: 70px;
+		width: 70px;
+	}
+	.icons i {
+		font-size: 1.5rem;
+	}
+}
+
+form {
+	background-color: var(--gray);
+	padding: 2rem;
+	border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+	form {
+		max-width: 800px;
+		margin: 0 auto;
+	}
+	.form-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.field {
+		flex: 0 0 calc(50% -1rem);
+	}
+}
+
+.field {
+	display: flex;
+	margin-bottom: 1rem;
+	align-items: center;
+}
+
+.field label {
+	flex: 0 0 90px;
+	color: var(--white);
+}
+
+.field input[type='text'],
+.field input[type='tel'],
+.field input[type='mail'],
+.field textarea {
+	flex: 1;
+	height: 2.4rem;
+}
+
+.w-100 {
+	flex: 0 0 100%;
+}
+
+.field textarea {
+	height: 4rem;
+}
+
+.submit-form {
+	text-align: center;
+}
